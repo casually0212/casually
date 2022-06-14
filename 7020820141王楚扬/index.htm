@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./data/picture/huayu.ico">
+    <title>欢迎来到花语</title>
+    <style type="text/css">
+        a:link{color:rgb(50, 44, 174);text-decoration: none;}
+        a:visited{color:rgb(50, 44, 174);text-decoration: none;}
+        a:hover{color:rgb(50, 44, 174);text-decoration: none;}
+        a:active{color:rgb(50, 44, 174);text-decoration: none;}    
+        @font-face
+        {
+            font-family: 'ziti';
+            src: url('./data/typeface/ziti.ttf');
+        }
+        body{
+            padding: 0px;margin: 0px;
+        }
+        .a{
+            background-image: url('./data/picture/beijing.jpeg') ;width: 100%;height: 4160px;
+            background-size: 100%;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .a1{
+            background-image: url('./data/picture/beijing.jpeg') ;width: 100%;height: 10000px;
+            background-size: 100%;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .b{
+            font-size: 20px;
+            position: absolute;
+            width: 100%;height: 60px;
+            top: 0px;left: 0px;
+            box-shadow: 0px 0px 5px darkblue;
+            border: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .c1{
+            position: absolute;
+            top: 12px;left: 16px;
+        }
+        .c2{
+            position: absolute;
+            top: 15px;left: 55px;
+            font-size: 23px;
+        }
+        .d1{
+            position: absolute;
+            top: 5px;left: 1115px;
+        }
+        .d2{
+            position: absolute;
+            top: 28px;left: 1108px;
+        }
+        .e1{
+            position: absolute;
+            top: 8px;left: 1230px;
+        }
+        .e2{
+            position: absolute;
+            top: 28px;left: 1195px;
+        }
+        .f1{
+            position: absolute;
+            top: 9px;left: 1350px;
+        }
+        .f2{
+            position: absolute;
+            top: 28px;left: 1340px;
+        }
+        .g1{
+            position: absolute;
+            top: 5px;left: 1450px;
+        }
+        .g2{
+            position: absolute;
+            top: 28px;left: 1445px;
+        }
+        .h1,.h2,.h3,.h4{
+            font-family: 'ziti';
+            font-size: 20px;
+            width: 20px;height: 150px;
+        }
+        .h1{
+            position: absolute;
+            top: 100px;left: 1230px;
+        }
+        .h2{
+            position: absolute;
+            top: 140px;left: 1300px;
+        }
+        .h3{
+            position: absolute;
+            top: 180px;left: 1370px;
+        }
+        .h4{
+            position: absolute;
+            top: 220px;left: 1440px;
+        }
+        .i1{
+            font-family: "ziti";
+            font-size: 130px;
+            position: absolute;
+            top: 220px;left: 180px;
+        }
+        .i2{
+            font-family: "ziti";
+            font-size: 150px;
+            position: absolute;
+            top: 350px;left: 800px;
+        }
+        .j{
+            position: absolute;
+            top: 660px;left: 740px;
+        }
+        .j2{
+            width: 100%;
+            position: absolute;
+            top: 760px;
+        }
+        .k{
+            width: 100%;height: 2000px;
+            position: fixed;
+            top: 800px;
+            
+            
+        }
+        /* .l{
+            
+            top: 50px;left: 1200px;
+            position:fixed;
+            z-index: 3;
+        } */
+        li{
+            display: inline-block;
+        }
+        .a1{
+            width: 100%;height: 750px;
+            position: relative;
+            z-index: 5;
+        }
+        *{
+            margin:0;
+            padding: 0;
+            transition: all 0.5s ease-out;
+        }
+        .l{
+            user-select: none;
+            display: flex;
+            position: relative;
+            width: 100%;height: 100%;
+            flex-direction: column;
+        }
+        .box{
+            width: 40px;height: 40px;
+            background-color: darkblue;
+            border-radius: 50%;
+            position: fixed;
+            top: 100px;left: 1350px;
+        }
+        .box::before{
+            position: absolute;
+            content: '';
+            width: 50%;height: 10%;
+            background-color: #ccc;
+            border-radius: 20px;
+            top: 45%;
+            left: 25%;
+        }
+        .box:after{
+            position: absolute;
+            content: '';
+            width: 10%;height: 50%;
+            background-color: #ccc;
+            border-radius: 20px;
+            top: 25%;
+            left: 45%;
+        }
+        .BoxHidden{
+            position: fixed;top: 140px;left: 1330px;
+            width: 80px;
+            list-style: none;
+            background-color: white;
+            text-align: center;
+            padding: 5px 0px;
+            border-radius: 20px;
+            transform: translateY(-5px);
+        }
+        li{
+            color: #95bbff;
+            font-weight :bold;
+            margin: 4px 0px 4px 0px;
+        }
+        .BoxHidden{
+            height: 0px;
+            overflow: hidden;
+        
+        }
+        .m1,.m2,.m3,.m4,.m5,.m6,.m7,.m8,.m9,.m10{
+            width: 1000px;height: 250px;
+            border: 1px solid black;
+            border-radius: 20px;
+            /* opacity:1; */
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .m1,.o1{
+            position: absolute;
+            top: 800px;left: 50px;
+        }
+        .p1,.p5,.p11{
+            position: absolute;
+            top: 20px;left: 20px;
+            border-radius: 10px;
+        }
+        .p2,.p6,.p12{
+            position: absolute;
+            top: 20px;left: 196px;
+        }
+        .p3{
+            position: absolute;
+            top: 220px;left: 900px;
+        }
+        .p4{
+            position: absolute;
+            top: 1px;
+        }
+        .m2,.o2{
+            position: absolute;
+            top: 1100px;left: 50px;
+        }
+        .m3,.o3{
+            position: absolute;
+            top: 1400px;left: 50px;
+        }
+        .p7{
+            position: absolute;
+            top: 70px;left: 10px;
+            border-radius: 10px;
+        }
+        .p8,.p10,.p14{
+            position: absolute;
+            top: 20px;left: 240px;
+        }
+        .m4,.o4{
+            position: absolute;
+            top: 1700px;left: 50px;
+        }
+        .p9,.p13{
+            position: absolute;
+            top: 50px;left: 10px;
+            border-radius: 10px;
+        }
+        .m5,.o5{
+            position: absolute;
+            top: 2000px;left: 50px;
+        }
+        .m6,.o6{
+            position: absolute;
+            top: 2300px;left: 50px;
+        }
+        .m7,.o7{
+            position: absolute;
+            top: 2600px;left: 50px;
+        }
+        .p15{
+            position: absolute;
+            top: 20px;left: 10px;
+            border-radius: 10px;
+        }
+        .p16{
+            position: absolute;
+            top: 20px;left: 200px;
+        }
+        .m8,.o8{
+            position: absolute;
+            top: 2900px;left: 50px;
+        }
+        .m9,.o9{
+            position: absolute;
+            top: 3200px;left: 50px;
+        }
+        .m10,.o10{
+            position: absolute;
+            top: 3500px;left: 50px;
+        }
+        .q{
+            background-color: rgb(86,86,86);
+            width: 100%;height: 160px;
+            position: absolute;
+            top: 4000px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="a1">
+        <div class="b" style="color:#6da4e7"><b>
+            <div><img src="./data/picture/huayu.png" width="35px" class="c1"><p class="c2"><i>花语</i></p></div>
+            <div><a href="./index.htm"><img src="./data/picture/home.png" width="25px" class="d1"></a><a href="./index.htm" class="d2">首页</a></div>
+            <div><a href="./data/subpage/chuangzuozhegongju.htm"  ><img src="./data/picture/gongju.png" width="23px" class="e1"></a><a href="./data/subpage/chuangzuozhegongju.htm" class="e2"  >创作者中心</a></div>
+            <div><a href=""><img src="./data/picture/zhuce.png" width="21px" class="f1"></a><a href="./data/subpage/zhuce.htm" class="f2">注册</a></div>
+            <div><a href="./data/subpage/denglu.htm"><img src="./data/picture/wode.png" width="25px" class="g1"></a><a href="./data/subpage/denglu.htm" class="g2">登录</a></div>
+        </b></div>
+        <div class="h1">若思念成风过</div><div class="h2">纸间浮上迷离</div><div class="h3">倾慕韶华红颜</div><div class="h4">不语尘世离愁</div>
+        <div class="i1"><i>欢迎来到</i></div><div class="i2"><i><b>花语</b></i></div>
+        <div><a href="#j1"><img src="./data/picture/jiantou.png" width="80px" class="j"></a></div>
+        <div><a name="j1" class="j2"><hr style="border-color: black;background-color: black;"></a></div>
+        </div>
+        <div class="k">
+            <div class="l">
+                <div class="BoxHidden" id="boxhidden">
+                    <ul>
+                        <li><a href="#n1">鸢尾</a></li>
+                        <li><a href="#n2">彼岸花</a></li>
+                        <li><a href="#n3">圣塞西利亚</a></li>
+                        <li><a href="#n4">勿忘我</a></li>
+                        <li><a href="#n5">西府海棠</a></li>
+                        <li><a href="#n6">伯利恒之星</a></li>
+                        <li><a href="#n7">紫罗兰</a></li>
+                        <li><a href="#n8">风信子</a></li>
+                        <li><a href="#n9">玛格丽特</a></li>
+                        <li><a href="#n10">三色堇</a></li>
+                    </ul></div>
+                    <div class="box" id="box"></div>
+                    </div>
+            </div>
+        </div>
+        <b><div class="m1"><img src="./data/picture/yuanwei.jpeg" width="146px" height="200px" class="p1"><p class="p2">花名:鸢尾<br><br>别称:乌鸢、扁竹花、屋顶鸢尾、蓝蝴蝶、紫蝴蝶、蛤蟆七、蝴蝶花<br><br>学名:Iris tectorum Maxim<br><br>象征意义:爱情和友谊、希望、童话<br><br>花语:爱的使者、绝望的爱、黑暗、期望、持久怀念、想念你、优雅的心、使命</p><div class="p3"><a href="./data/subpage/yuanwei.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m2"><img src="./data/picture/bianhua.jpeg" width="150px" height="200px" class="p5"><p class="p6">花名:彼岸花<br><br>别称:乌蒜、曼珠沙华、曼陀罗华、石蒜<br><br>学名:Lycoris radiata var. radiata<br><br>象征意义:永不相见、无尽的爱、美丽动人、优美纯洁<br><br>花语:相互思念、恶魔的温柔、无望的等待、悲伤的回忆</p><div class="p3"><a href="./data/subpage/bianhua.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m3"><img src="./data/picture/shengsaixiliya.jpg" width="200px" height="106px" class="p7"><p class="p8">花名:圣塞西莉亚<br><br>别称:无<br><br>学名:Rosa"St. Cecilia"<br><br>象征意义:被称为英国国花<br><br>花语:浪子的真情</p><div class="p3"><a href="./data/subpage/shengsaixiliya.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m4"><img src="./data/picture/wuwangwo.jpeg" width="200px" height="150px" class="p9"><p class="p10">花名:勿忘我<br><br>别称:勿忘草、匙叶草、星辰花<br><br>学名:Myosotis silvatica Ehrh.ex Hoffm<br><br>象征意义:我永远不会忘记你、不要忘记我、真爱、永恒的记忆、忠诚<br><br>花语:永恒的爱，浓情厚谊 ，永不变的心，永远的回忆</p><div class="p3"><a href="./data/subpage/wuwangwo.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m5"><img src="./data/picture/xifuhaitang.jpeg" width="133px" height="200px" class="p11"><p class="p12">花名:西府海棠<br><br>别称:海红、子母海棠、小果海棠、解语花<br><br>学名:Malus * micromalus Makino<br><br>象征意义:单恋、美丽、娴静、顽强<br><br>花语:无怨无悔、不求回报</p><div class="p3"><a href="./data/subpage/xifuhaitang.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m6"><img src="./data/picture/boliheng.jpeg" width="200px" height="150px" class="p13"><p class="p14">花名:伯利恒之星<br><br>别称:天鹅绒、黑星大甘菜、虎眼万年青<br><br>学名:Ornithogalum umbellatum L.<br><br>象征意义:耶稣的养父——圣约瑟夫之花<br><br>花语:敏感</p><div class="p3"><a href="./data/subpage/bolihengzhixing.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m7"><img src="./data/picture/ziluolan.jpeg" width="166px" height="200px" class="p15"><p class="p16">花名:紫罗兰<br><br>别称:草桂花、四桃克、草紫罗兰<br><br>学名:Matthiola incana (L.) R. Br.<br><br>象征意义:永久的爱、抓住幸福、盛夏清凉、永远忠诚<br><br>花语:永恒的爱与美</p><div class="p3"><a href="./data/subpage/ziluolan.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m8"><img src="./data/picture/fengxingzi.jpg" width="200px" height="150px" class="p9"><p class="p10">花名:风信子<br><br>别称:洋水仙、西洋水仙、五色水仙、时样锦<br><br>学名:Hyacinthus orientalis L. Sp. Pl.<br><br>象征意义:享受生命<br><br>花语:纵情享受人生、纯洁的爱情、忧郁自由、悲伤后悔</p><div class="p3"><a href="./data/subpage/fengxinzi.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m9"><img src="./data/picture/magelite.jpeg" width="133px" height="200px" class="p11"><p class="p16">花名:玛格丽特<br><br>别称:蓬蒿菊、东洋菊、法兰西菊、小牛眼菊、少女花<br><br>学名:Argyranthemum frutescens (L.) Sch.-Bip<br><br>象征意义:期待爱<br><br>花语:骄傲、满意、喜悦</p><div class="p3"><a href="./data/subpage/magelite.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div>
+        <div class="m10"><img src="./data/picture/sansejin.jpg" width="200px" height="150px" class="p9"><p class="p10">花名:三色堇<br><br>别称:三色堇菜、猫儿脸、蝴蝶花、人面花、猫脸花、阳蝶花、鬼脸花<br><br>学名:Viola tricolor L.<br><br>象征意义:情侣间的思念、互相忠诚<br><br>花语:快乐、沉思、思慕、快乐、请思念我</p><div class="p3"><a href="./data/subpage/sansejin.htm" style="color: black;"  >了解更多<img src="./data/picture/gengduo.png" width="20px" class="p4"></a></div></div></b>
+        <a name="n1" class="o1"></a><a name="n2" class="o2"></a><a name="n3" class="o3"></a><a name="n4" class="o4"></a><a name="n5" class="o5"></a><a name="n6" class="o6"></a><a name="n7" class="o7"><a name="n8" class="o8"><a name="n9" class="o9"><a name="n10" class="o10"></a>
+    <div class="q"><br>营业执照信息网络传播视听节目许可证:*******&nbsp网络文化经营许可证&nbsp赣网文【2022】****-***号<br>广播电视节目制作经营许可证:(赣)字第*****号增值电信业务经营许可证 赣**-********<br>
+        互联网ICP备案:赣ICP备********号-*出版物经营许可证&nbsp赣批字第***** 号互联网药品信息服务资格证<br>赣-非经营性-2022-****营业性演出许可证 赣市文演(经)**-****<br>
+        不良信息举报邮箱:161835237@qq.com&nbsp涉未成年举报邮箱:1413048404@qq.com<br>不良信息举报电话:***********转1九江互联网举报中心&nbsp*****政务服务便民热线</div>
+    </div>
+</body>
+<script>
+    var box = document.getElementById("box");
+    var BoxHidden = document.getElementById("boxhidden");
+    var BoxHiddenUl = document.querySelector(".BoxHidden > ul").clientHeight;
+    let boxIndex = 1;
+    box.onclick = () => {
+        boxIndex++;
+        if(boxIndex % 2 == 0){
+            box.style.transform = "rotate(180deg)";
+            box.style.background = "#98BBFF";
+            BoxHidden.style.height = BoxHiddenUl + "px";
+            return
+        }
+        box.style.transform = "rotate(0deg)";
+        BoxHidden.style.height = "0px";
+        box.style.background = "darkblue";
+    }
+</script>
+</html>
